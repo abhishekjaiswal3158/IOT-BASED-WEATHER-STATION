@@ -35,7 +35,7 @@ HARDWARE REQIREMENT->
 
 2->RainModule
 
-![alt text](https://github.com/abhishekjaiswal3158/IOT-BASED-WEATHER-STATION/blob/main/RainModeule.jpeg?raw=true)
+![alt text](https://github.com/abhishekjaiswal3158/IOT-BASED-WEATHER-STATION/blob/main/RainModule.jpeg?raw=true)
 
 3->NODEMCU
 
