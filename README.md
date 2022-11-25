@@ -29,17 +29,31 @@ HARDWARE REQIREMENT->
 
 5->USB cable
 
+1->DHT11
+
 ![alt text](https://github.com/abhishekjaiswal3158/IOT-BASED-WEATHER-STATION/blob/main/DHT11.jpeg?raw=true)
+
+2->RainModule
 
 ![alt text](https://github.com/abhishekjaiswal3158/IOT-BASED-WEATHER-STATION/blob/main/RainModeule.jpeg?raw=true)
 
+3->NODEMCU
+
 ![alt text](https://github.com/abhishekjaiswal3158/IOT-BASED-WEATHER-STATION/blob/main/NODEMCU.jpeg?raw=true)
+
+4->Circuit
 
 ![alt text](https://github.com/abhishekjaiswal3158/IOT-BASED-WEATHER-STATION/blob/main/Circuit1.jpeg?raw=true)
 
+5->Circuit 
+
 ![alt text](https://github.com/abhishekjaiswal3158/IOT-BASED-WEATHER-STATION/blob/main/Circuit2.jpeg?raw=true)
 
+6->App Ui
+
 ![alt text](https://github.com/abhishekjaiswal3158/IOT-BASED-WEATHER-STATION/blob/main/APPUI.jpeg?raw=true)
+
+7->App Ui
 
 ![alt text](https://github.com/abhishekjaiswal3158/IOT-BASED-WEATHER-STATION/blob/main/APPUI1.jpeg?raw=true)
 
