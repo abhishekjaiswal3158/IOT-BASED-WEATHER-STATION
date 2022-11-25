@@ -1,0 +1,73 @@
+/*Weather monitoring system with the New Blynk app
+   Home Page
+*/
+//Include the library files
+
+#define BLYNK_PRINT Serial
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+#include <DHT.h>
+
+
+
+#define BLYNK_TEMPLATE_ID "TMPLUi3Z1FEh"
+#define BLYNK_DEVICE_NAME "First"
+#define BLYNK_AUTH_TOKEN "SDNeNBH277aPwJvYI-emxDGh0_a4NWBn"
+
+char auth[] = BLYNK_AUTH_TOKEN;
+char ssid[] = "Abhishek ";//Enter your WIFI name
+char pass[] = "9956746836";//Enter your WIFI password
+
+
+DHT dht(D3, DHT11);//(DHT sensor pin,sensor type)
+BlynkTimer timer;
+
+//Define Rain and LDR pins
+#define rain A0
+#define light D0
+
+//Create three variables for pressure
+double T, P;
+char status;
+
+void setup() {
+  Serial.begin(9600);
+ 
+  pinMode(light, INPUT);
+
+  Blynk.begin(auth, ssid, pass, "blynk.cloud", 80);
+  dht.begin();
+
+  //Call the functions
+  timer.setInterval(100L, DHT11sensor);
+  timer.setInterval(100L, rainSensor);
+  timer.setInterval(100L, LDRsensor);
+}
+
+//Get the DHT11 sensor values
+void DHT11sensor() {
+  float h = dht.readHumidity();
+  float t = dht.readTemperature();
+  Serial.println(t);
+  if (isnan(h) || isnan(t)) {
+    Serial.println("Failed to read from DHT sensor!");
+    return;
+  }
+  Blynk.virtualWrite(V0, t);
+  Blynk.virtualWrite(V1, h);
+}
+
+//Get the rain sensor values
+void rainSensor() {
+  int value = analogRead(rain);
+  value = 100-map(value, 0, 1024, 0, 100);
+  Serial.println(value);
+  Blynk.virtualWrite(V2, value);
+}
+
+
+
+void loop() {
+  Blynk.run();//Run the Blynk library
+  timer.run();//Run the Blynk timer
+}
