@@ -29,6 +29,7 @@ HARDWARE REQIREMENT->
 
 5->USB cable
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 1->DHT11
 
 ![alt text](https://github.com/abhishekjaiswal3158/IOT-BASED-WEATHER-STATION/blob/main/DHT11.jpeg?raw=true)
